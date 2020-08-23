@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <section>
+      <div id="target"></div>
+      <button id="plus">+</button>
+      <button id="reset">reset</button>
+      <button id="minus">-</button>
+    </section>
+
+    <script>
+      "use-strict";
+      const target = document.getElementById("target");
+      const plus = document.getElementById("plus");
+      const minus = document.getElementById("minus");
+      const reset = document.getElementById("reset");
+      let num = 0;
+
+      target.innerHTML = num;//初期の数値をtargetに格納
+
+      plus.addEventListener("click", () => {
+        num++;
+        target.innerHTML = num;
+        console.log(num);
+      });
+      minus.addEventListener("click", () => {
+        num--;
+        target.innerHTML = num;
+        console.log(num);
+      });
+      reset.addEventListener("click", () => {
+        num = 0;
+        target.innerHTML = num;
+        console.log(num);
+      });
+    </script>
+  </body>
+</html>
